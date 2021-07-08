@@ -10,9 +10,9 @@ const cryptoTest = async () => {
     const hashedPassword = await bcrypt.hash(password, salt)
     console.log(hashedPassword)
 
-    // // when checking user login
-    // const match = await bcrypt.compare('👾', hashedPassword)
-    // console.log('match:', match)
+    // when checking user login
+    const match = await bcrypt.compare('hello', hashedPassword)
+    console.log('match:', match)
   } catch (error) {
     console.log(error)
   }
