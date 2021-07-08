@@ -6,9 +6,9 @@ const dbTest = async () => {
   try {
     // CREATE
     const newUser = new db.User({
-      name: 'oliver cromwell',
-      email: 'o@c.com',
-      password: 'oliver'
+      name: 'ken hamamoto',
+      email: 'test@c.com',
+      password: 'testpw'
     })
 
     await newUser.save()
@@ -16,7 +16,7 @@ const dbTest = async () => {
 
     // READ -- at login
     const foundUser = await db.User.findOne({
-      name: 'oliver cromwell'
+      name: 'ken hamamoto'
     })
 
     console.log('found user:', foundUser)
