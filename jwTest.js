@@ -18,7 +18,7 @@ const jwtTest = () => {
     // request to server:
 
     // decode the incoming jwt
-    const decoded = jwt.verify(token, 'This is my secret')
+    const decoded = jwt.verify(token, 'other secret')
     console.log(decoded)
   
   } catch (err) {
