@@ -6,7 +6,7 @@ const authLockedRoute = require('./authLockedRoute.js')
 
 // GET /users -- test api endpoint
 router.get('/', (req, res) => {
-  res.json({ msg: 'hi! the user endpoint is okay 👌' })
+  res.json({ msg: 'testing! from server(user)' })
 })
 
 // POST /users/register -- CREATE a new user (aka registration)
@@ -60,7 +60,7 @@ router.post('/login', async (req, res) => {
       email: req.body.email
     })
 
-    const validationFailedMessage = 'Incorrect username or password 😭'
+    const validationFailedMessage = 'Incorrect username or password 🛑'
 
     // if the user found -- return immediately
     if(!findUser) return res.status(400).json({ msg: validationFailedMessage })

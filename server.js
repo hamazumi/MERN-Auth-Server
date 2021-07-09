@@ -20,7 +20,7 @@ app.use(express.json()) // for the request body
 app.use('/api-v1/users', require('./controllers/api-v1/users.js'))
 
 app.get('/', (req, res) => {
-  res.json({ msg: 'hello from the backend! 👋' })
+  res.json({ msg: 'testing the server(backend)🤙'})
 })
 
 // listen on a port
